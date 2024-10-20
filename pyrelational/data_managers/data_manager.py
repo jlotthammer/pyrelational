@@ -57,6 +57,7 @@ class DataManager:
         loader_num_workers: int = 0,
         loader_collate_fn: Optional[Callable[[List[T]], Any]] = None,
         loader_pin_memory: bool = False,
+        loader_persistent_workers: bool = False,
         loader_drop_last: bool = False,
         loader_timeout: float = 0,
     ):
@@ -83,6 +84,7 @@ class DataManager:
         :param loader_num_workers: number of cpu workers for dataloaders
         :param loader_collate_fn: collate fn for dataloaders
         :param loader_pin_memory: pin memory flag for dataloaders
+        :param loader_persistent_workers: persistent workers flag for dataloaders
         :param loader_drop_last: drop last flag for dataloaders
         :param loader_timeout: timeout value for dataloaders
         """
@@ -107,6 +109,7 @@ class DataManager:
         self.loader_num_workers = loader_num_workers
         self.loader_collate_fn = loader_collate_fn
         self.loader_pin_memory = loader_pin_memory
+        self.loader_persistent_workers = loader_persistent_workers
         self.loader_drop_last = loader_drop_last
         self.loader_timeout = loader_timeout
 
@@ -453,6 +456,7 @@ class DataManager:
             num_workers=self.loader_num_workers,
             collate_fn=self.loader_collate_fn,
             pin_memory=self.loader_pin_memory,
+            persistent_workers=self.loader_persistent_workers,
             drop_last=self.loader_drop_last,
             timeout=self.loader_timeout,
         )
