@@ -1,11 +1,17 @@
 data/
 .idea
+.vscode
+.DS_Store
+
+run_experiments.sh
 
 # Dev files
 deprecated/
 examples/demo/experiment_logs/
 experiment_logs/
 test_data/
+
+**/ray_benchmark_results/
 
 # Checkpoints
 checkpoints/
