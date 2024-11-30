@@ -1,4 +1,5 @@
 from pyrelational.datasets.classification import (
+    MNIST,
     BreastCancerDataset,
     Checkerboard2x2Dataset,
     Checkerboard4x4Dataset,
@@ -14,6 +15,7 @@ from pyrelational.datasets.classification import (
     UCIParkinsons,
     UCISeeds,
 )
+from pyrelational.datasets.drugcomb import DrugCombDataset
 from pyrelational.datasets.regression import (
     DiabetesDataset,
     SynthReg1,
